@@ -1,5 +1,38 @@
-###### Slovenská technická univerzita v Bratislave  
-###### Fakulta informatiky a informačných technológií     
-##### Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2022/23
-# 3D Game Engines a ich význam
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+# 3DGameEngine-y aichvýznam
+
+## *
+
+## JanLenhart
+
+```
+SlovenskátechnickáuniverzitavBratislave
+Fakultainformatikyainformaènýchtechnológií
+xlenhart@stuba.sk
+```
+```
+8.októb er 2022
+```
+```
+Abstrakt
+```
+```
+Ka¾do dennýmvývo jomtechnológiesap osúva júa jtechnologickéhra-
+nicevideohier.Voktóbri 1958 fyzikWilliamHiginb othamvytvoril,èosa
+p ova¾ujeakoprvávideohra.Bolotonieèop o dobnéhrePONG[3].Ne-
+skôrvroku 1980 b olavyvinutáprvá3Dhra.Bolatotankováhra,ktorá
+vyu¾ívalavektorovúgrakuna3Drealizáciu[1].Ob etietohrymaliveμký
+význampregemikáciuaakosablí¾imekdne¹nejdob e,tvorbahierza-
+èínaby»odos»zlo¾itej¹ia,pretonajejuμahèenievznikliGameEngine-y.
+GameEngine-ynámumo¾òujúvyvíja»hryakotaké,b eztoho,abysme
+muselimíòa»èasnavývo jzákladnýchprostriedkovnaktorýchjezalo¾ená
+ka¾dávideohra.Týmtovieme,¾ea jGameEngine-yma júmimoriadne
+veμkývýznampregemikáciu.Vtomtoèlánkusadozvieteokμúèových
+èastiachGameEngine-ov,nástro jovnatvorbuzábavných,alea jeduka-
+ènýchhier[2].
+```
+```
+*Semestrálnypro jektvpredmeteMetó dyin¾inierskejpráce,ak.rok2022/23,vedenie:
+```
+Zuzana©pitálová
+
+
