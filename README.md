@@ -2,8 +2,11 @@
 ## Jan Lenhart
 
 Slovenská technická univerzita v Bratislave
+
 Fakulta informatiky a informačných technológií
+
 xlenhart@stuba.sk
+
 8. október 2022
 
 ### Abstrakt
