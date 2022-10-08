@@ -1,38 +1,13 @@
-# 3DGameEngine-y aichvýznam
+# 3D Game Engine-y a ich význam
+## Jan Lenhart
 
-## *
-
-## JanLenhart
-
-```
-SlovenskátechnickáuniverzitavBratislave
-Fakultainformatikyainformaènýchtechnológií
+Slovenská technická univerzita v Bratislave
+Fakulta informatiky a informačných technológií
 xlenhart@stuba.sk
-```
-```
-8.októb er 2022
-```
-```
-Abstrakt
-```
-```
-Ka¾do dennýmvývo jomtechnológiesap osúva júa jtechnologickéhra-
-nicevideohier.Voktóbri 1958 fyzikWilliamHiginb othamvytvoril,èosa
-p ova¾ujeakoprvávideohra.Bolotonieèop o dobnéhrePONG[3].Ne-
-skôrvroku 1980 b olavyvinutáprvá3Dhra.Bolatotankováhra,ktorá
-vyu¾ívalavektorovúgrakuna3Drealizáciu[1].Ob etietohrymaliveμký
-význampregemikáciuaakosablí¾imekdne¹nejdob e,tvorbahierza-
-èínaby»odos»zlo¾itej¹ia,pretonajejuμahèenievznikliGameEngine-y.
-GameEngine-ynámumo¾òujúvyvíja»hryakotaké,b eztoho,abysme
-muselimíòa»èasnavývo jzákladnýchprostriedkovnaktorýchjezalo¾ená
-ka¾dávideohra.Týmtovieme,¾ea jGameEngine-yma júmimoriadne
-veμkývýznampregemikáciu.Vtomtoèlánkusadozvieteokμúèových
-èastiachGameEngine-ov,nástro jovnatvorbuzábavných,alea jeduka-
-ènýchhier[2].
-```
-```
-*Semestrálnypro jektvpredmeteMetó dyin¾inierskejpráce,ak.rok2022/23,vedenie:
-```
-Zuzana©pitálová
+8. október 2022
 
+### Abstrakt
 
+Každodenným vývojom technológie sa posúvajú aj technologické hranice video hier. V októbri 1958 fyzik William Higinbotham vytvoril, čo sa považuje ako prvá video hra. Bolo to niečo podobné hre PONG. Neskôr v roku 1980 bola vyvinutá prvá 3D hra. Bola to tanková hra, ktorá využívala vektorovú grafiku na 3D realizáciu. Obe tieto hry mali veľký význam pre gemifikáciu a ako sa blížime k dnešnej dobe, tvorba hier začína byť o dosť zložitejšia, preto na jej uľahčenie vznikli Game Engine-y. Game Engine-y nám umožňujú vyvíjať hry ako také, bez toho, aby sme museli míňať čas na vývoj základných prostriedkov na ktorých je založená každá video hra. Týmto vieme, že aj Game Engine-y majú mimoriadne veľký význam pre gemifikáciu. V tomto článku sa dozviete o kľúčových častiach Game Engine-ov, nástrojov na tvorbu zábavných, ale aj edukačných hier.
+
+*Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2022/23, vedenie: Zuzana Špitálová
