@@ -1,4 +1,4 @@
-# 3D Game Engine-y a ich význam
+# 3D Game Engine-y a ich význam asd
 ## Jan Lenhart
 
 Slovenská technická univerzita v Bratislave  
