@@ -1,6 +1,6 @@
 % Metódy inžinierskej práce
 
-\documentclass[10pt,twoside,slovak,a4paper,hidelinks]{article}
+\documentclass[10pt,oneside,slovak,a4paper,hidelinks]{article}
 
 \usepackage[slovak]{babel}
 %\usepackage[T1]{fontenc}
@@ -9,6 +9,8 @@
 \usepackage{graphicx}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage{indentfirst}
+\usepackage{color,soul}
 
 \usepackage{cite}
 %\usepackage{times}
@@ -23,42 +25,55 @@
 	{\small \texttt{xlenhart@stuba.sk}}
 }
 
-\date{\small 8. október 2022} % upravte
+\date{\small 30. október 2022} % upravte
 
 \begin{document}
-
-\maketitle
-
-\begin{abstract}
-Každodenným vývojom technológie sa posúvajú aj technologické hranice video hier. V októbri 1958 fyzik William Higinbotham vytvoril, čo sa považuje ako prvá video hra. Bolo to niečo podobné hre PONG \cite{FirstGame}. Neskôr v roku 1980 bola vyvinutá prvá 3D hra. Bola to tanková hra, ktorá využívala vektorovú grafiku na 3D realizáciu \cite{First3DGame}. Obe tieto hry mali veľký význam pre gemifikáciu a ako sa blížime k dnešnej dobe, tvorba hier začína byť o dosť zložitejšia, preto na jej uľahčenie vznikli Game Engine-y. Game Engine-y nám umožňujú vyvíjať hry ako také, bez toho, aby sme museli míňať čas na vývoj základných prostriedkov na ktorých je založená každá video hra. Týmto vieme, že aj Game Engine-y majú mimoriadne veľký význam pre gemifikáciu. V tomto článku sa dozviete o kľúčových častiach Game Engine-ov, nástrojov na tvorbu zábavných, ale aj edukačných hier \cite{IEEE}.
-\end{abstract}
-
-%V bibliografickom súbore je niekoľko zdrojov z IEEE, ktoré som ešte necitoval, ale mám v pláne z ních čerpať. Ten, ktorý ma primárne usmernil k téme je https://ieeexplore.ieee.org/document/6321770.
-
-\section{Úvod}
-\section{Systemová architektúra}
-\subsection{Low level}
-\subsubsection{Scene Manager}
-\subsubsection{GUI System}
-\subsubsection{Physics Engine}
-\subsubsection{Animation Engine}
-\subsubsection{Object Manager}
-\subsubsection{Special Effects}
-\subsection{High level}
-\subsubsection{Math Library}
-\subsubsection{Data Structures}
-\subsubsection{Input System}
-\subsubsection{Time System}
-\subsubsection{Graphics Engine}
-\subsubsection{Audio System}
-\section{Záver}
-
-
-
-%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
-
-
-% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-\bibliography{literatura}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+	
+	\maketitle
+	
+	\vspace*{\fill}
+	\begin{abstract}
+		Každodenným vývojom technológie sa posúvajú aj technologické hranice video hier. V októbri 1958 fyzik William Higinbotham vytvoril, čo sa považuje ako prvá video hra. Bolo to niečo podobné hre PONG \cite{FirstGame}. Neskôr v roku 1980 bola vyvinutá prvá 3D hra. Bola to tanková hra, ktorá využívala vektorovú grafiku na 3D realizáciu \cite{First3DGame}. Obe tieto hry mali veľký význam pre gemifikáciu a ako sa blížime k dnešnej dobe, tvorba hier začína byť o dosť zložitejšia, preto na jej uľahčenie vznikli Game Engine-y. Game Engine-y nám umožňujú vyvíjať hry ako také, bez toho, aby sme museli míňať čas na vývoj základných prostriedkov na ktorých je založená každá video hra. Týmto vieme, že aj Game Engine-y majú mimoriadne veľký význam pre gemifikáciu. V tomto článku sa dozviete o kľúčových častiach Game Engine-ov, nástrojov na tvorbu zábavných, ale aj edukačných video hier.
+	\end{abstract}
+	\vspace*{\fill}
+	
+	\pagebreak
+	
+	\section{Úvod}
+		V dnešnej dobe veľké množstvo ľudí si radi zahrajú nejakú hru vo voľnom čase. Faktom je že štandardy video hier postupne rastú. Už nestačí, aby video hra bola len zábavná, ale aby zanechala aj príjemný dojem. To sa dá dosiahnuť vysoko kvalitnou grafikou, špeciálnymi efektmi, realistickou fyzikou, zvukom a animáciou. Kvôli vysokým štandardom tvorba vysoko kvalitných hier je dôležitá. Práve preto veľkú časť vývojového procesu nám uľahčujú game engine-y. Bez nich by tvorba hier rovnakej kvality trvala nesmierne dlho a práve preto takmer všetky video hry, či už vydané AAA štúdiami alebo samostatnými vývojármi sú tvorené pomocou game engine-ov.
+	\section{Systémová architektúra}
+		Systémová architektúra game engine-ov sa dá rozdeliť do dvoch veľkých skupín. Sú to časti nízkej úrovne a časti vysokej úrovne \cite{Primary}. Časti vysokej úrovne sú rozhrania založené na abstrakcii príkazov nízkej úrovne. Na druhej strane časti nízkej úrovne sú menšie systémy, ktoré pomáhajú častiam vysokej úrovne. Pracujú s dátami, dátovými štruktúrami, I/O rozhraniami a správou hardvéru.
+	\subsection{Časti nízkej úrovne}
+		\subsubsection{Základný systém}
+			Základný systém je vlastne skupina nástrojov game engine-a. Sú to rôzne nástroje a softvér ako sú napríklad matematická knižnica, knižnica na operáciu s reťazcami, správa asynchrónneho čítania a zápisu súborov, dátové štruktúry, systém na správu vstupov, a mnohé iné. Z uvedéných príkladov vieme povedať, že najvýznamnejšia je matematická knižnica, ktorá nám okrem základných a zložitých matematických operácií a trigonometrických funkcií poskytuje aj funkcie na operácie s vektormi a maticami. Tie sú významné hlavne v grafickom a fyzickom engine-e. Taktiež významné sú aj dátové štruktúry a systém na správu vstupov. Často používané dátové štruktúri sú stack, queue a Binary Search Tree(BST). Stack pracuje na princípe FILO(First In, Last Out) a queue na princípe FIFO(First In, First Out). Binary Search Tree(BST) je vlastne binary tree, kde do každého uzla s hodnotou x je z ľavej strany pripojený iba uzol s menšou hodnotou ako x a s pravej strany iba uzol s väčšou alebo rovnakou hodnotou ako x. To nám umožňuje veľmi rýchle prehľadávanie. Časová zložitosť prehľadávania v BST je O($log_2n$) a v najhoršom prípade O($n$).
+		\subsubsection{Grafický engine}
+			Grafický systém(Renderer) sa považuje za najzložitejší modul game engine-ov. Problematika v tejto oblasti spočívala v rýchlosti priestorového kreslenia obrázkov v čo najväčšom počte a za čo najmenší čas. To bolo dlhú dobu obmedzené technológiu hardvéru. V dnešnej dobe je to už menším problémom. Technológie priestorového kreslenia sú veľmi vyspelé v rýchlosti, ale sú aj oveľa realistickejšie. Veľmi známe spôsoby priestorového kreslenia sú Ray Casting a Raz Tracing. Ray Casting je menej náročná metóda a preto sa bežne používa vo video hrách. Ray Tracing je metóda, pomocou ktorej vieme nakresliť foto-realistické obrázky. Pri kreslení berie do úvahy reflekciu a refrakciu lúčov čo znamená, že priesvitné materiáli ako je sklo, budú potrebovať omnoho viac výpočtov, ale bez toho by sme foto-realizmu nevedeli replikovať. Jednou s výhod v grafickom programovaní je, že vieme písať programy ktoré sa vykonávajú na grafickej karte. Taktiež vieme preposlať dáta týkajúce sa našej scény na operačnú pamäť grafickej karty, tým zmenšujeme množstvo dát, ktoré posielame grafickej karte za jeden cyklus. To znamená že môžeme grafickej karte posielať aj matice lineárnych a nelineárnych transformácií. Potom sa výpočty robia na grafickej karte paralelne pre každý bod v našom virtuálnom priestore.
+		\subsubsection{Audio systém}
+			Zvuk v game engine-och je rovnako dôležitý ako grafika. Hudba a iné zvukové efekty ako sú ambientové zvuky ovplyvňujú emócie hráča a tým zlepšujú jeho zažitie hry.
+		\subsubsection{Networking}
+			Sieťovanie je kritickou časťou na implementáciu multiplayer možnosti. Väčšina úspešných hier sú spoločenské hry, tímové hry alebo individuálne hry pre viacero hráčov(FFA - Free For All). Známe sú aj hry MMOG(Massively Multiplayer Online Games), ktoré umožňujú veľkému množstvu hráčov, hrať súčasne. Sieťovanie nám umožňuje tvorbu serverových programov pre herné serveri a klientových programov pre hráčov.
+	\subsection{Časti vysokej úrovne}
+		\subsubsection{Scene-Object manažér}
+			V game engine-och potrebujeme ukladať a spravovať objekty našej hre niekde v pamäti. Jednou s organizačnou metódou je Entity-Component System(ECS) \cite{ECS}. Tento system funguje tak, že všetko v našom virtuálnom priestore sa dá reprezentovať nejakým objektom(Entity) a na základe toho aké vlastnosti chceme, aby náš objekt obsahoval prideľujeme mu jeho komponenty (Component). Môže to byť kamera, zvukový zdroj, svetlo, sktriptá ktoré definuje jeho správanie a iné.
+		\subsubsection{GUI systém}
+			Poskytuje možnosti tvorby grafických rozhraní, rôzne menu, nastavenia a HUDs(Heads-Up Displays). Využíva modul nízkej úrovne, grafický engine na zobrazenie grafických rozhraní na obrazovku. Využíva dátovú štruktúru stack, poskytnutú od základného systému na uchovávanie stavov menu grafických rozhraní.
+		%\subsubsection{Fyzický engine}
+		%\subsubsection{Scripting engine}
+		\subsubsection{Animačný engine}
+			V každej hre, či už 2D alebo 3D, je potrebne používať animáciu. Animation Engine nám poskytuje všetky potrebné pomôcky na tvorbu animácií. V 2D hrách animacia je realizovaná pomocou obrázkov, ktoré sa po sebe striedajú. V 3D hrách sa používajú kostrové animacie, ktoré umožňujú animátorovi hýbať 3D charaktera pomocou kostí a kĺbov. 3D body toho modelu sa hýbu súčasne a relatívne na kosti toho modelu \cite{Secondary}.
+		\subsubsection{Specialne efekty}
+			Vizuálne efekty vylepšujú kvalitu video hier. Privádzajú ich k životu, často pomocou pohyblivých častíc, dynamických tiení, hmle, rôznych svetelných efektov... Tento systém nie je pod-časťou grafického engine-u, ale používa ho na kreslenie textúry, ktorú potom prekreslí cez obrázok zobrazený na obrazovke.
+	\section{Aplikácia v gemifikačnej sfére}
+		\ldots
+	\section{Záver}
+		\ldots
+	
+	
+	
+	%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
+	
+	
+	% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
+	%\bibliography{literatura}
+	\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
