@@ -1,0 +1,198 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Game Engine",
+      "id": 1,
+      "attr": {
+        "position": [
+          -448,
+          -12,
+          1
+        ],
+        "style": {
+          "width": 97
+        }
+      },
+      "ideas": {
+        "1": {
+          "title": "Hlavna časť článku",
+          "id": 14,
+          "ideas": {
+            "1": {
+              "title": "Systemová architektúra",
+              "id": 24,
+              "ideas": {
+                "1": {
+                  "title": "Moduly nízkej úrovni",
+                  "id": 25,
+                  "attr": {
+                    "position": [
+                      175,
+                      -171,
+                      3
+                    ]
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Matematická knižnica",
+                      "id": 27
+                    },
+                    "2": {
+                      "title": "Dátové štruktúry",
+                      "id": 28
+                    },
+                    "3": {
+                      "title": "Vstupový system",
+                      "id": 29
+                    },
+                    "4": {
+                      "title": "Časový system",
+                      "id": 30
+                    },
+                    "5": {
+                      "title": "Audio system",
+                      "id": 31
+                    },
+                    "6": {
+                      "title": "Grafický system",
+                      "id": 32
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Moduly vysokej úrovni",
+                  "id": 26,
+                  "attr": {
+                    "position": [
+                      178,
+                      176,
+                      2
+                    ]
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Scénový manažér",
+                      "id": 33
+                    },
+                    "2": {
+                      "title": "Objektový manažér",
+                      "id": 34
+                    },
+                    "3": {
+                      "title": "GUI system",
+                      "id": 35
+                    },
+                    "4": {
+                      "title": "Animačný systém",
+                      "id": 36
+                    },
+                    "5": {
+                      "title": "System pre speciálne efekty",
+                      "id": 37,
+                      "attr": {
+                        "style": {
+                          "width": 184
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "Fyzický engine",
+                      "id": 39
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-10": {
+          "title": "Abstrakt",
+          "id": 8,
+          "attr": {
+            "position": [
+              225,
+              -269,
+              3
+            ]
+          },
+          "ideas": {
+            "1": {
+              "title": "Začiatok a pokrok video hier",
+              "id": 11,
+              "attr": {
+                "style": {
+                  "width": 175
+                }
+              }
+            },
+            "2": {
+              "title": "Vznik a význam game engineov",
+              "id": 12,
+              "attr": {
+                "style": {
+                  "width": 198
+                }
+              }
+            }
+          }
+        },
+        "-20": {
+          "title": "Úvod",
+          "id": 15,
+          "attr": {
+            "position": [
+              223,
+              -6,
+              4
+            ]
+          },
+          "ideas": {
+            "1": {
+              "title": "Definícia game enginov",
+              "id": 16
+            },
+            "0.5": {
+              "title": "Presnejší význam game enginov",
+              "id": 19,
+              "attr": {
+                "position": [
+                  63,
+                  -43,
+                  1
+                ],
+                "style": {
+                  "width": 198
+                }
+              }
+            }
+          }
+        },
+        "-30": {
+          "title": "Záver",
+          "id": 21,
+          "attr": {
+            "position": [
+              225,
+              229,
+              5
+            ]
+          },
+          "ideas": {
+            "1": {
+              "title": "Sumár",
+              "id": 22
+            },
+            "2": {
+              "title": "Vlastná myšlienka",
+              "id": 23
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "Game Engine",
+  "links": []
+}
